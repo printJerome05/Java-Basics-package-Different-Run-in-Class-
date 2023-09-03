@@ -88,5 +88,46 @@ public class MainOOP {
         // stantiate the method then use the defined variable inside this class ex usname , pass to pass the data from the Account.java defined parameters
         Account Acc = new Account(usname,pass);    
         
+        
+        System.out.println("--------------------ObjectMethod--------------------");  
+        ObjectMethod_Character Ch = new ObjectMethod_Character("Jerome","Hello THERe",120,100,12);
+        ObjectMethod_Character Ch1 = new ObjectMethod_Character("Marco","Hola",100,100,12);
+        
+        // Ch is the instantiate of the Constructor ObjectMethod_Charcter. Then the Gree() is the method inside the class of it.
+        Ch.Greet();
+        Ch.Say();
+        Ch1.Greet();
+        Ch1.Say();
+        
+        System.out.println("--------------------ObjectMethod with user input --------------------");  
+        Scanner s = new Scanner(System.in);
+        System.out.print("Greet another person: ");
+        String other = s.nextLine();
+        Ch.GreetOther(other);
+        Ch1.GreetOther(other);
+        
+        
+        System.out.println("--------------------Example OOP OBJECT METHOD STUDENT --------------------");  
+        ObjectMethod_STUDENT obs = new ObjectMethod_STUDENT("Jerome","Marco","BSIT","A",4,80,80);
+        ObjectMethod_STUDENT obs1 = new ObjectMethod_STUDENT("Mara","Oruga","BSBA","A",4,99,99);
+        ObjectMethod_STUDENT obs2 = new ObjectMethod_STUDENT("Joy","marco","BSBA","A",4,91,91);
+        ObjectMethod_STUDENT obs3 = new ObjectMethod_STUDENT("secret","arf","BSBA","A",4,96,96);
+        ObjectMethod_STUDENT obs4 = new ObjectMethod_STUDENT("qwerty","iop","BSBA","A",4,101,101);
+        ObjectMethod_STUDENT obs5 = new ObjectMethod_STUDENT("secret1","meow","BSBA","A",4,74,74);
+
+
+        obs.introduceSelf();
+         obs1.introduceSelf();
+          obs2.introduceSelf();
+           obs3.introduceSelf();
+            obs4.introduceSelf();
+             obs5.introduceSelf();
+            
+        obs.evaluateGrade();
+         obs1.evaluateGrade();
+          obs2.evaluateGrade();
+           obs3.evaluateGrade();
+            obs4.evaluateGrade();
+             obs5.evaluateGrade();
     }    
 }
