@@ -129,5 +129,29 @@ public class MainOOP {
            obs3.evaluateGrade();
             obs4.evaluateGrade();
              obs5.evaluateGrade();
+             
+             
+        System.out.println("--------------------Encapsulation --------------------");  
+        //SETTER ENCAPSULATION
+        Encapsulation e = new Encapsulation(1,"Jerome","JEROME123");
+        
+        //using encapsulation individual you can access it the id
+        // instantiate new varible liek in the example = int id .
+        // so the value will be 12 if we print it
+        e.setId(12);
+        int id = e.GetId();
+        
+        //the one you will print is the id variable 
+        System.out.println(id);
+        
+        //getter is only for read only example
+        // so the value would be JEROME123 the one we first defined
+        // just make a getter first in the class only 1 variable at a time no a construct
+        String usname1 = e.username();
+        System.out.println(usname1);
+        
+        
+        
+      
     }    
 }
