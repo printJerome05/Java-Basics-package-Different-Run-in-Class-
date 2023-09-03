@@ -11,6 +11,8 @@ package ObjectOriented_Programming;
 // import class syntax = import packagename.classname;
 import ObjectOriented_Programming.Person;
 import java.util.Scanner;
+import ObjectOriented_Programming.Account;
+
 public class MainOOP {
 
     /**
@@ -53,6 +55,38 @@ public class MainOOP {
            System.out.println(p.firstname);
               System.out.println(p.lasttname);
                 System.out.println(p.sex);
-    }
-    
+        
+        System.out.println("--------------------Product Class--------------------");        
+        /* no need to import the class if it is in the same package like this .
+           Example is this Product it is in the same package (Object Oriented Programming) So we can just instantiate it.
+        */
+        Product pt = new Product();
+        
+        System.out.println("--------------------Main Product Class--------------------");  
+        //need to define values if the method have parameters
+        MainProduct mp = new MainProduct("Nova ",20);
+        MainProduct mp1 = new MainProduct("Piatos ",14);
+        MainProduct mp2 = new MainProduct("Stick O ",1);
+        
+        
+        
+        System.out.println("--------------------Example with user input--------------------");  
+        Scanner accuser = new Scanner(System.in);
+        Scanner accpass = new Scanner(System.in);
+        
+        // when passing data to the other class define varialbes first
+        String usname;
+        String pass;
+                                                                   
+       
+        
+        System.out.print("Input Username: ");
+        usname = accuser.nextLine();
+        System.out.print("Input Password: ");
+        pass = accuser.nextLine();
+        
+        // stantiate the method then use the defined variable inside this class ex usname , pass to pass the data from the Account.java defined parameters
+        Account Acc = new Account(usname,pass);    
+        
+    }    
 }
