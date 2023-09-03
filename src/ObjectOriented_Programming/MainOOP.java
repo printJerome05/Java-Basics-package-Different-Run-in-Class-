@@ -151,7 +151,21 @@ public class MainOOP {
         System.out.println(usname1);
         
         
+        System.out.println("--------------------Overloading constructors --------------------");  
+        //this example of overloading constructors\
+       // below is the example of 3 overloading constructor defined in the class
+        OverLoadingConstructor olc = new  OverLoadingConstructor("jerome","marco","araiz");
+        //below is the example of the all variables defined in the constructor
+        OverLoadingConstructor olc1 = new  OverLoadingConstructor("jerome","marco","araiz","male",12);
         
+        // to print the value of encapsulated value need to have a getter
+        // intantiate first the variable
+        String fname = olc.getFirstname();
+        String lname = olc.getlastname();
+        String mname = olc.middletname();
+        String gen = olc.gender();
+        int age = olc.getage();
+        System.out.println(fname +" "+lname+" "+mname+" "+gen+" "+age );
       
     }    
 }
