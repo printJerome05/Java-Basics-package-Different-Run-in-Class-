@@ -12,7 +12,8 @@ package ObjectOriented_Programming;
 import ObjectOriented_Programming.Person;
 import java.util.Scanner;
 import ObjectOriented_Programming.Account;
-
+import ObjectOriented_Programming.Inheritance_Person;
+import ObjectOriented_Programming.Inheritance_Todler;
 public class MainOOP {
 
     /**
@@ -167,5 +168,39 @@ public class MainOOP {
         int age = olc.getage();
         System.out.println(fname +" "+lname+" "+mname+" "+gen+" "+age );
       
+        
+        System.out.println("--------------------Inheritance --------------------");  
+        Inheritance_Todler it = new Inheritance_Todler();
+        Inheritance_Person ip = new Inheritance_Person();
+        
+      
+        ip.age = 15;
+        ip.fname = "Mara";
+        ip.lname = "Oruga";
+        
+        //Notice the inhertiance todler class dont have its variables age,fname,lname it is possilbe thru inheritance by extends keyword on the class.
+        it.age = 12;
+        it.fname = "jerome";
+        it.lname = "marco";
+        
+        
+        //printing the values
+        ip.Name();
+        it.Name();
+        it.SPEAK();
+        
+        //overloading can be many wheteher its 2 or 3 or many 
+        System.out.println("---------------------Overloading Inheritance Constructor ---------------------");  
+        Inheritance_Person_OverdingConstructor OPO = new Inheritance_Person_OverdingConstructor("jerome","Marco",12);
+        OPO.example();
+       
+        Inheritance_Todler_OverdingConstructor ITO = new Inheritance_Todler_OverdingConstructor(12,"mara","oruga","noodles");
+        ITO.say();
+        
+        System.out.println("---------------------Overloading Inheritance Constructor ---------------------");  
+        ITO.example();
+        
+        OPO.example();
+        
     }    
 }
